@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import SkipCard from './SkipCard';
-import type { WasteItem } from "../types/Waste.ts";
+import type {WasteItem} from "../types/Waste.ts";
 
 interface SkipListProps {
     skips: WasteItem[];
 }
 
-function SkipList({ skips }: SkipListProps) {
+function SkipList({skips}: SkipListProps) {
     const [selectedSkip, setSelectedSkip] = useState<WasteItem | null>(null);
 
     const handleSelect = (skip: WasteItem) => {
@@ -32,7 +32,8 @@ function SkipList({ skips }: SkipListProps) {
                 </div>
             </div>
             {selectedSkip && (
-                <footer className="fixed bottom-0 left-0 w-full bg-gray-900 text-white flex flex-col sm:flex-row justify-between items-center p-2 sm:p-3 md:p-4">
+                <footer
+                    className="fixed bottom-0 left-0 w-full bg-gray-900 text-white flex flex-col sm:flex-row justify-between items-center p-2 sm:p-3 md:p-4">
                     <div className="text-sm sm:text-base flex flex-col sm:flex-row items-center mb-2 sm:mb-0">
                         <span>{selectedSkip.size} Yard Skip</span>
                         <span className="text-blue-400 ml-2">£{selectedSkip.price_before_vat.toFixed(2)}</span>

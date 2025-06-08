@@ -1,4 +1,4 @@
-import type { WasteItem } from "../types/Waste.ts";
+import type {WasteItem} from "../types/Waste.ts";
 import maxresdefault from '../assets/maxresdefault.jpg';
 import {OctagonAlert} from "lucide-react";
 
@@ -8,7 +8,7 @@ interface SkipCardProps {
     isSelected: boolean;
 }
 
-function SkipCard({ skip, onSelect, isSelected }: SkipCardProps) {
+function SkipCard({skip, onSelect, isSelected}: SkipCardProps) {
     const totalPrice = skip.price_before_vat * (1 + skip.vat / 100);
 
     return (
@@ -20,8 +20,9 @@ function SkipCard({ skip, onSelect, isSelected }: SkipCardProps) {
                     className="w-full h-full object-cover opacity-70"
                 />
                 {!skip.allowed_on_road && (
-                    <div className="absolute top-2 left-2 bg-yellow-300 text-black px-2 py-1 rounded text-xs flex items-center gap-1">
-                        <OctagonAlert className="w-4 h-4" />
+                    <div
+                        className="absolute top-2 left-2 bg-yellow-300 text-black px-2 py-1 rounded text-xs flex items-center gap-1">
+                        <OctagonAlert className="w-4 h-4"/>
                         <span>Not allowed on the road</span>
                     </div>
                 )}

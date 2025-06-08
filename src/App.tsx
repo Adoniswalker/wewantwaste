@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { fetchSkips } from './api';
+import {useState, useEffect} from 'react';
+import {fetchSkips} from './api';
 import "./App.css"
 import SkipList from './components/SkipList';
 import Header from './components/Header';

@@ -9,8 +9,8 @@ export type WasteItem = {
     postcode: string;
     area: string;
     forbidden: boolean;
-    created_at: string; // ISO datetime string
-    updated_at: string; // ISO datetime string
+    created_at: string;
+    updated_at: string;
     allowed_on_road: boolean;
     allows_heavy_waste: boolean;
 };

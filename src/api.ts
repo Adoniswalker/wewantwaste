@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type{ WasteItem } from './types/Waste.ts';
+import type {WasteItem} from './types/Waste.ts';
 
 export const fetchSkips = async (): Promise<WasteItem[]> => {
     try {
