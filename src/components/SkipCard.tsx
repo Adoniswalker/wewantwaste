@@ -1,6 +1,7 @@
 import type { WasteItem } from "../types/Waste.ts";
 import maxresdefault from "../assets/maxresdefault.jpg";
 import { OctagonAlert } from "lucide-react";
+import clsx from "clsx";
 
 interface SkipCardProps {
   skip: WasteItem;
@@ -12,7 +13,12 @@ function SkipCard({ skip, onSelect, isSelected }: SkipCardProps) {
   const totalPrice = skip.price_before_vat * (1 + skip.vat / 100);
 
   return (
-    <div className="relative w-60 flex flex-col justify-between max-h-180 shrink grow basis-80 rounded-lg overflow-hidden text-white font-sans">
+    <div
+      className={clsx(
+        "relative w-60 flex flex-col justify-between max-h-180 shrink grow basis-80 rounded-lg overflow-hidden font-sans",
+        { "border-4 border-solid border-blue-700": isSelected }
+      )}
+    >
       <div className="w-full h-72 bg-gradient-to-b from-yellow-500 to-orange-600">
         <img
           src={maxresdefault}
@@ -26,7 +32,7 @@ function SkipCard({ skip, onSelect, isSelected }: SkipCardProps) {
           </div>
         )}
       </div>
-      <div className="p-4 bg-gray-800 h-[40%]">
+      <div className="p-4 bg-gray-200 h-[40%]">
         <h3 className="text-2xl font-bold">{skip.size} Yard Skip</h3>
         <p className="text-sm">Hire for {skip.hire_period_days} days</p>
         <p className="text-2xl text-blue-600">£{totalPrice.toFixed(2)}</p>
@@ -37,7 +43,11 @@ function SkipCard({ skip, onSelect, isSelected }: SkipCardProps) {
         )}
         <button
           onClick={() => onSelect(skip)}
-          className="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 w-full text-sm"
+          // className="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 w-full text-sm"
+          className={clsx(
+            "mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 w-full text-sms",
+            { "bg-blue-700": isSelected }
+          )}
           aria-label={`Select ${skip.size} yard skip`}
         >
           {isSelected ? "Selected" : "Select This Skip"}
