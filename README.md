@@ -1,54 +1,26 @@
-# React + TypeScript + Vite
+# Skip Size Selection Page (TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A redesigned "Choose Your Skip Size" page for We Want Waste, built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Approach
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Data**: Type-safe integration with the provided API, displaying size, price (with VAT), hire period, and restrictions.
+- **Design**: Card-based UI with green branding, responsive for mobile and desktop.
+- **UX**: Loading/error states, selected skip highlighting, and accessible buttons.
+- **TypeScript**: Strict typing for skip data and component props.
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clone: `git clone git@github.com:Adoniswalker/wewantwaste.git`
+2. Install: `npm install`
+3. Run: `npm start`
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Live Demo
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+[CodeSandbox Link](https://codesandbox.io/p/github/Adoniswalker/wewantwaste/main?import=true)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Improvements
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- Type-safe API response handling.
+- Responsive grid with Tailwind CSS.
+- Accessible UI with ARIA labels and keyboard support.

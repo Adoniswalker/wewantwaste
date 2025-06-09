@@ -12,7 +12,7 @@ function SkipCard({ skip, onSelect, isSelected }: SkipCardProps) {
   const totalPrice = skip.price_before_vat * (1 + skip.vat / 100);
 
   return (
-    <div className="relative w-60 flex flex-col justify-between max-h-180 shrink grow basis-60 rounded-lg overflow-hidden text-white font-sans">
+    <div className="relative w-60 flex flex-col justify-between max-h-180 shrink grow basis-80 rounded-lg overflow-hidden text-white font-sans">
       <div className="w-full h-72 bg-gradient-to-b from-yellow-500 to-orange-600">
         <img
           src={maxresdefault}
