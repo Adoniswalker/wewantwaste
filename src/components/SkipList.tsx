@@ -15,7 +15,7 @@ function SkipList({ skips }: SkipListProps) {
 
   return (
     <div className="mx-auto container px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-wrap justify-center items-stretch gap-8 p-4">
+      <div className="flex flex-wrap justify-center items-stretch gap-8 p-4 mb-16">
         {skips.map((skip) => (
           <SkipCard
             key={skip.id}

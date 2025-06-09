@@ -19,14 +19,23 @@ const NavBar = () => {
       <button className="flex items-center text-white text-sm hover:text-blue-500 focus:outline-none mr-4">
         <Truck className="mr-1 text-blue-500" /> Select Skip
       </button>
-      <button className="flex items-center text-white text-sm hover:text-blue-500 focus:outline-none mr-4">
-        <ShieldCheck className="mr-1 text-blue-500" /> Permit Check
+      <button
+        className="flex items-center text-gray-500 text-sm focus:outline-none mr-4 cursor-not-allowed"
+        disabled
+      >
+        <ShieldCheck className="mr-1 text-gray-500" /> Permit Check
       </button>
-      <button className="flex items-center text-white text-sm hover:text-blue-500 focus:outline-none mr-4">
-        <Calendar className="mr-1 text-blue-500" /> Choose Date
+      <button
+        className="flex items-center text-gray-500 text-sm focus:outline-none mr-4 cursor-not-allowed"
+        disabled
+      >
+        <Calendar className="mr-1 text-gray-500" /> Choose Date
       </button>
-      <button className="flex items-center text-white text-sm hover:text-blue-500 focus:outline-none mr-4">
-        <CreditCard className="mr-1 text-blue-500" /> Payment
+      <button
+        className="flex items-center text-gray-500 text-sm focus:outline-none mr-4 cursor-not-allowed"
+        disabled
+      >
+        <CreditCard className="mr-1 text-gray-500" /> Payment
       </button>
     </div>
   );

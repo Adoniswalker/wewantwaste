@@ -15,8 +15,8 @@ function SkipCard({ skip, onSelect, isSelected }: SkipCardProps) {
   return (
     <div
       className={clsx(
-        "relative w-60 flex flex-col justify-between max-h-180 shrink grow basis-80 rounded-lg overflow-hidden font-sans",
-        { "border-4 border-solid border-blue-700": isSelected }
+        "relative w-60 max-w-80 flex flex-col justify-between max-h-180 shadow-sm shrink grow basis-80 rounded-lg overflow-hidden font-sans",
+        { "border-4 border-solid border-blue-900": isSelected }
       )}
     >
       <div className="w-full h-72 bg-gradient-to-b from-yellow-500 to-orange-600">
@@ -43,10 +43,9 @@ function SkipCard({ skip, onSelect, isSelected }: SkipCardProps) {
         )}
         <button
           onClick={() => onSelect(skip)}
-          // className="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 w-full text-sm"
           className={clsx(
-            "mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 w-full text-sms",
-            { "bg-blue-700": isSelected }
+            "mt-2 px-4 py-2 bg-blue-700 text-white rounded hover:bg-blue-800 w-full text-sms",
+            { "bg-blue-900": isSelected }
           )}
           aria-label={`Select ${skip.size} yard skip`}
         >
