@@ -3,6 +3,7 @@ import { fetchSkips } from "./api";
 import SkipList from "./components/SkipList";
 import Header from "./components/Header";
 import type { WasteItem } from "./types/Waste.ts";
+import NavBar from "./components/NavBar.tsx";
 
 function App() {
   const [skips, setSkips] = useState<WasteItem[]>([]);
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-100">
+      <NavBar />
       <Header />
       {loading && (
         <div className="flex justify-center p-4">
